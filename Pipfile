@@ -7,6 +7,9 @@ name = "pypi"
 requests = "*"
 beautifulsoup4 = "*"
 selenium = "*"
+psycopg2 = "*"
+mysql = "*"
+django-scheduler = "*"
 
 [dev-packages]
 
