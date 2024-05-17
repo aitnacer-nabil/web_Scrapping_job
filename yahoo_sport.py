@@ -30,13 +30,14 @@ def soccerParser():
 
     URL = "https://sports.yahoo.com/soccer/news/"
     chrome_options = Options()
-    # chrome_options.add_argument("--headless")  # Run Chrome in the background
-    # chrome_options.add_argument("--disable-gpu")  # Disable GPU acceleration
-    # chrome_options.add_argument("--no-sandbox")  # Disable sandbox mode
-    # chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3')
+    chrome_options.add_argument("--headless")  # Run Chrome in the background
+    chrome_options.add_argument("--disable-gpu")  # Disable GPU acceleration
+    chrome_options.add_argument("--no-sandbox")  # Disable sandbox mode
+    chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3')
+
     chrome_options.add_argument('--ignore-ssl-errors=yes')
     chrome_options.add_argument('--ignore-certificate-errors')
-    chrome_options.add_experimental_option('detach', True)
+    # chrome_options.add_experimental_option('detach', True)
 
     print("Headless mode activated")
     driver = webdriver.Chrome(options=chrome_options)
