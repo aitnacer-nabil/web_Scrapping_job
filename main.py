@@ -40,10 +40,11 @@ async def job():
     except Exception as e:
         await send_message(f"An error occurred in soccerParser: {e}")
 
+
 async def main():
     print("Script started")
     async with websockets.serve(handler, "0.0.0.0", 8765):
-        await asyncio.Future()  # Run forever
+        print("WebSocket server started")
 
         print("Starting the job")
         await job()
@@ -53,6 +54,10 @@ async def main():
         while True:
             await schedule.run_pending()
             await asyncio.sleep(1)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
 
 if __name__ == "__main__":
     asyncio.run(main())
