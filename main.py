@@ -7,6 +7,7 @@ import time
 from mlb import mlb_scrapper
 from nba import nba_scrapper
 from nfl import nfl_scrapper
+from web_socket import handler
 from yahoo_sport import soccerParser
 
 async def send_message(message):
