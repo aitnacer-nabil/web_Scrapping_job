@@ -11,7 +11,7 @@ from web_socket import handler
 from yahoo_sport import soccerParser
 
 async def send_message(message):
-    async with websockets.connect("ws://your_websocket_server_address:port") as websocket:
+    async with websockets.connect("ws://0.0.0.0:8765") as websocket:
         await websocket.send(message)
 
 async def job():
@@ -59,9 +59,3 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 
-if __name__ == "__main__":
-    asyncio.run(main())
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
